@@ -68,28 +68,28 @@ class Blockchain {
     }
 }
 
-let simpleCoin = new Blockchain();
+let lcoin = new Blockchain();
 
-console.log('Criando transações...');
-simpleCoin.addTransaction(new Transaction('0x0001', '0x0002', 10));
-simpleCoin.addTransaction(new Transaction('0x0002', '0x0001', 5));
+console.log('Criando transações.');
+lcoin.addTransaction(new Transaction('0x0001', '0x0002', 10));
+lcoin.addTransaction(new Transaction('0x0002', '0x0001', 5));
 
-console.log('Iniciando mineração...');
-simpleCoin.minePendingTransactions();
+console.log('Iniciando mineração.');
+lcoin.minePendingTransactions();
 
-console.log('Criando mais transações...');
-simpleCoin.addTransaction(new Transaction('0x0001', '0x0002', 20));
-simpleCoin.addTransaction(new Transaction('0x0003', '0x0001', 15));
+console.log('Criando mais transações.');
+lcoin.addTransaction(new Transaction('0x0001', '0x0002', 20));
+lcoin.addTransaction(new Transaction('0x0003', '0x0001', 15));
 
-console.log('Iniciando nova mineração...');
-simpleCoin.minePendingTransactions();
+console.log('Iniciando nova mineração.');
+lcoin.minePendingTransactions();
 
-console.log('Criando mais transações...');
-simpleCoin.addTransaction(new Transaction('0x0001', '0x0002', 16));
-simpleCoin.addTransaction(new Transaction('0x0003', '0x0001', 11));
+console.log('Criando mais transações.');
+lcoin.addTransaction(new Transaction('0x0001', '0x0002', 16));
+lcoin.addTransaction(new Transaction('0x0003', '0x0001', 11));
 
-console.log('Iniciando nova mineração...');
-simpleCoin.minePendingTransactions();
+console.log('Iniciando nova mineração.');
+lcoin.minePendingTransactions();
 
-console.log('A blockchain é válida?', simpleCoin.isChainValid() ? 'Sim' : 'Não');
-console.log(JSON.stringify(simpleCoin, null, 4));
+console.log('A blockchain é válida?', lcoin.isChainValid() ? 'Sim' : 'Não');
+console.log(JSON.stringify(lcoin, null, 4));

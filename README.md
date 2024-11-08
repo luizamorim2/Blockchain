@@ -51,6 +51,7 @@ Um bloco da blockchain que contém transações e um hash do bloco anterior.
   - `timestamp`: O momento em que o bloco foi criado.
   - `transactions`: As transações dentro do bloco.
   - `previousHash`: O hash do bloco anterior.
+  - `nonce`: Número ajustado até o hash atender à dificuldade do bloco.
   
 - **Funções:**
   - `calculateHash()`: Gera um hash baseado no conteúdo do bloco.
@@ -64,6 +65,7 @@ Gerencia toda a cadeia de blocos.
   - `minePendingTransactions()`: Minera um bloco com as transações pendentes e o adiciona à blockchain.
   - `createTransaction()`: Adiciona uma nova transação à lista de transações pendentes.
   - `isChainValid()`: Verifica se todos os blocos na cadeia são válidos.
+  - `getTransactionHistory()`: Verifica o historico de transações de um determinado endereço.
 
 ---
 
